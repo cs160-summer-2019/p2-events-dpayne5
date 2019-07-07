@@ -54,7 +54,9 @@
 					<div class="p2-circle bg-blue p2-border"></div>
 					<div class="p2-circle bg-blue p2-border"></div>
 					<div class="p2-circle bg-blue"></div>
+          <div class="parentOfGradient">
 					<div class="p2-circle" id="gradient-circle"></div>
+           </div>
 				</div>
 			</div>
 		</div>
@@ -64,6 +66,68 @@
 
 <script type="text/javascript">
 	// your solution here
+  $(".bg-purple").on("click", function() {
+    $('.bg-purple').hide();
+  });
+  
+  $(".bg-green").on("click", function() {
+    $(".bg-green").hide();
+    $(".bg-blue").hide();
+    
+    
+});
+  
+  $(".bg-orange.p2-border").on("click", function() {
+    console.log("only click on orange border");
+    
+    $(this).siblings(".p2-border.bg-orange").hide();
+    $(this).hide();
+    
+    
+    
+});
+  
+  $(".btn").on("click", function() {
+    
+    $("*").show();
+    
+    
+});
+  
+  $(".parentOfGradient").hover(function(){
+    console.log("hovering over");
+    $(this).children().css('visibility', 'hidden');
+    
+    
+    }, function(){
+    
+    console.log("not hovering over");
+    $(this).children().css('visibility', 'visible');
+  });
+  
+  
+  /*
+  $(document).ready(function () {
+
+    
+    
+    $('#gradient-circle').mouseenter(function () {
+        
+      console.log("started hovering");
+      $(this).parent
+                                   
+      
+    });
+
+    $('#gradient-circle').mouseleave(function () {
+        
+      console.log("exited hovering");
+    }); 
+
+}); */
+
+  
+  
 
 </script>
 </body>

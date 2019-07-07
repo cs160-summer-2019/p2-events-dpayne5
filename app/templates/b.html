@@ -39,8 +39,42 @@
 
 
 <script type="text/javascript">
+  //flag to signal stop of making bubbles
+  var flag = false;
+  
+  var buildButtons = setInterval( function() {
+        $(".shape-container").append("<div class='p2-circle bg-purple'></div>")
+      }, 1000);
+  
+  
+  
+  
+  $(".btn").on("click", function() {
+    clearInterval(buildButtons);
+  });
+  
+  
+  /*
+  $(document).ready(function () {
+    
+    
+    
+    
+     
+      setInterval( function() {
+        $(".shape-container").append("<div class='p2-circle bg-purple'></div>")
+      }, 1000);
+    
+}); */
+
+  
+  
+  
 
 	// your solution here
+  
+  
+  
 
 </script>
 </body>
